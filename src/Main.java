@@ -7,13 +7,24 @@ public class Main {
 
     public static void main(String[] args) {
 
-        long destination = Long.parseLong(args[0]);
-        int rocketPower = Integer.parseInt(args[1]);
-        int rocketWeight = Integer.parseInt(args[2]);
+
+        int rocketPower = Integer.parseInt(args[0]);
+        int rocketWeight = Integer.parseInt(args[1]);
+        String destination = args[2];
+
+        Rocket.Cabin cabin = new Rocket.Cabin();
+        SpaceX spaceX = new SpaceX();
 
 
-        Rocket rocket = new SpaceXRocket(destination, rocketPower, rocketWeight);
-
+        switch (destination) {
+            case "Mars":
+                cabin.start(rocketPower, rocketWeight, Planets.MARS.destination);
+                spaceX.getTimeToOrbitalSpeed(rocketPower, rocketWeight);
+                break;
+            default:
+                System.out.println("Sorry we can't get here");
+                break;
+        }
     }
 
 }

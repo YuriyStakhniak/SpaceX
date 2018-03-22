@@ -1,41 +1,40 @@
 /**
- * Created by yurezzz13 on 21.03.18.
+ * Created by yurezzz13 on 22.03.18.
  */
-public abstract class Rocket implements RocketFunctionality {
+public abstract class Rocket {
 
-   private long destination;
-   private int rocketPower;
-   private int rocketWeight;
-
-
-    public Rocket(long destination, int rocketPower, int rocketWeight) {
-        this.destination = destination;
-        this.rocketPower = rocketPower;
-        this.rocketWeight = rocketWeight;
-    }
-
-    class Engine{
-
-        int minTankCapacity = 1000000;
-        int maxTankCapacity = 5000000;
-
-        int fuel;
-
-        int getFuel(){
-
-            fuel = minTankCapacity + (int) (Math.random() * maxTankCapacity);
-
-            return fuel;
-        }
-
-    }
+    public static final int ORBITAL_SPEED = 800000000;
 
     static class Cabin{
 
-        void start(){
+        Engine engine = new Engine();
+
+        public void start(int rocketPower, int rocketWeight, int destination){
+
+            int fuelConsumption = rocketPower*rocketWeight;
+
+
+
+            if(engine.getFuel()/fuelConsumption >= destination){
+                System.out.println("You've got " + engine.getFuel() + " gallons of fuel");
+                System.out.println("Value of fuel consumption " + fuelConsumption +
+                        " gallons per mile");
+                System.out.println("We are going to Mars");
+
+            }
+
+            else {
+                System.out.println("Sorry, you stay at home");
+                System.out.println("You've got " + engine.getFuel() + " gallons of fuel");
+                System.out.println("You should know " +
+                        "value of fuel consumption in this case might be " +
+                        fuelConsumption + " gallons per mile");
+
+            }
 
         }
 
     }
+
 
 }

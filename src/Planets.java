@@ -1,14 +1,16 @@
 /**
- * Created by yurezzz13 on 21.03.18.
+ * Created by yurezzz13 on 22.03.18.
  */
 public enum Planets {
 
-    MERCURY(22190000l), VENUS(45000000l), MARS(55757930l), JUPITER(967000000l),
-    SATURN(1660000000l), URANUS(2600000000l), NEPTUNE(4300000000l);
+    MARS(47000, "Mars");
 
-    public long distance;
+    int destination;
 
-    Planets(long distance) {
-        this.distance = distance;
+    String name;
+
+    Planets(int destination, String name) {
+        this.destination = destination;
+        this.name = name;
     }
 }
