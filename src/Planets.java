@@ -1,6 +1,3 @@
-/**
- * Created by yurezzz13 on 22.03.18.
- */
 public enum Planets {
 
     MARS(47000, "Mars");

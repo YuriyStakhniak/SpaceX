@@ -1,21 +1,16 @@
-/**
- * Created by yurezzz13 on 22.03.18.
- */
 public class SpaceX extends Rocket implements RocketParamCalculating {
 
-    int timeToOrbitalSpeed;
+    @Override
 
-        @Override
+    public void getTimeToOrbitalSpeed(int rocketPower, int rocketWeight) {
 
-        public void getTimeToOrbitalSpeed(int rocketPower, int rocketWeight){
+        int timeToOrbitalSpeed;
 
-            timeToOrbitalSpeed = (int) (Rocket.ORBITAL_SPEED/(rocketWeight+rocketPower));
+        timeToOrbitalSpeed = Rocket.ORBITAL_SPEED / (rocketWeight + rocketPower);
 
-
-            System.out.println("Time to orbital speed " + timeToOrbitalSpeed);
-        }
-
+        System.out.println("Time to orbital speed " + timeToOrbitalSpeed);
     }
+}
 
 
 

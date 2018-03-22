@@ -1,12 +1,6 @@
-
-
-/**
- * Created by yurezzz13 on 21.03.18.
- */
 public class Main {
 
     public static void main(String[] args) {
-
 
         int rocketPower = Integer.parseInt(args[0]);
         int rocketWeight = Integer.parseInt(args[1]);
@@ -14,7 +8,6 @@ public class Main {
 
         Rocket.Cabin cabin = new Rocket.Cabin();
         SpaceX spaceX = new SpaceX();
-
 
         switch (destination) {
             case "Mars":
@@ -26,5 +19,4 @@ public class Main {
                 break;
         }
     }
-
 }
