@@ -6,17 +6,7 @@ public class Main {
         int rocketWeight = Integer.parseInt(args[1]);
         String destination = args[2];
 
-        Rocket.Cabin cabin = new Rocket.Cabin();
-        SpaceX spaceX = new SpaceX();
-
-        switch (destination) {
-            case "Mars":
-                cabin.start(rocketPower, rocketWeight, Planets.MARS.destination);
-                spaceX.getTimeToOrbitalSpeed(rocketPower, rocketWeight);
-                break;
-            default:
-                System.out.println("Sorry we can't get here");
-                break;
-        }
+      StartButton.pushStartButton(rocketPower, rocketWeight, destination);
+      
     }
 }
