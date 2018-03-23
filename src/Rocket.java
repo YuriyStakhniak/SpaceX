@@ -8,7 +8,7 @@ abstract class Rocket {
 
 		void start(int destination, int rocketPower, int rocketWeight) {
 
-			if (engine.getFuel() / fuelConsumptionCalculating(rocketPower, rocketWeight) >= destination) {
+			if (fuelEnoughCheck(int rocketPower, int rocketWeight)>= destination) {
 
 				startConditionsInfo(rocketPower, rocketWeight);
 
@@ -40,6 +40,10 @@ abstract class Rocket {
 			System.out.println("You should know " + "value of fuel consumption in this case might be "
 					+ fuelConsumptionCalculating(rocketPower, rocketWeight) + " gallons per mile");
 
+		}
+
+		int fuelEnoughCheck(int rocketPower, int rocketWeight){
+			return engine.getFuel() / fuelConsumptionCalculating(rocketPower, rocketWeight)
 		}
 	}
 }
