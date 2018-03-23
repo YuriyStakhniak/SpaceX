@@ -5,7 +5,7 @@ abstract class Rocket {
 	static class Cabin {
 		Engine engine = new Engine();
 		void start(int destination, int rocketPower, int rocketWeight) {
-			if (fuelEnoughCheck(int rocketPower, int rocketWeight)>= destination) {
+			if (fuelEnoughCheck(rocketPower, rocketWeight)>= destination) {
 				startConditionsInfo(rocketPower, rocketWeight);
 			} else {
 				startFailedConditionsInfo(rocketPower, rocketWeight);
@@ -30,7 +30,7 @@ abstract class Rocket {
 					+ fuelConsumptionCalculating(rocketPower, rocketWeight) + " gallons per mile");
 		}
 
-		int fuelEnoughCheck(int rocketPower, int rocketWeight){
+		long fuelEnoughCheck(int rocketPower, int rocketWeight){
 			return engine.getFuel() / fuelConsumptionCalculating(rocketPower, rocketWeight);
 		}
 	}
