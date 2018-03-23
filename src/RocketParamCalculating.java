@@ -1,4 +1,4 @@
 public interface RocketParamCalculating {
 
-    void getTimeToOrbitalSpeed(int rocketPower, int rocketWeight);
+	void getTimeToOrbitalSpeed(int rocketPower, int rocketWeight);
 }

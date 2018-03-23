@@ -1,13 +1,13 @@
 public enum Planets {
 
-    MARS(47000, "Mars");
+	MARS(47000, "Mars");
 
-    int destination;
+	int destination;
 
-    String name;
+	String name;
 
-    Planets(int destination, String name) {
-        this.destination = destination;
-        this.name = name;
-    }
+	Planets(int destination, String name) {
+		this.destination = destination;
+		this.name = name;
+	}
 }
